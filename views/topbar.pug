@@ -1,0 +1,33 @@
+nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.d-flex.justify-content-center#topbar
+	.container
+		a.navbar-brand(href="/")
+			<i class='fas fa-map'></i> FavoPlaces
+		button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"): span.navbar-toggler-icon
+		div.collapse.navbar-collapse.d-inline-flex
+			ul.navbar-nav.justify-content-center
+				li.nav-item: a.nav-link(href="/")
+					i.fas.fa-home
+					|   Home
+				li.nav-item.active: a.nav-link(href="/search")
+					i.fas.fa-search
+					|   Search
+				li.nav-item: a.nav-link(href='/favos')
+					i.fas.fa-heart
+					|   Favos
+				//- li.nav-item: a.nav-link(href='/register')
+				//-     i.fas.fa-user-plus
+				//-     |   Sign up
+				//- li.nav-item: a.nav-link(href='/login')
+				//-     i.fas.fa-sign-in-alt
+				//-     |   Login
+				li.nav-item: a.nav-link(href='/logout')
+					i.fas.fa-sign-out-alt
+					|   Logout
+script.
+	console.log('** FROM topbar.pug **');
+	$(".nav-item").click(function() {
+		$( this ).addClass( "active" );
+		var classes = $(this).attr('class');
+		console.log('** from topbar.pug **' + classes);
+	});
+			

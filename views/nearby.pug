@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    title search map    
+    link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css")
+    style
+      include ../assets/css/styles.css
+      include ../assets/css/search.css
+    
+  body
+    h1 the search page
+    h1 map
+    input#input(type="text" class='controls' placeholder='search...')
+    div(id='map')
+
+    script(src="../js/nearby.js")
+    script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBuKUXPfazCgPzZo5IxPXd5eROvvIDqUzc&libraries=places&callback=initMap" async defer)

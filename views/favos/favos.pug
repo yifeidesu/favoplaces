@@ -1,0 +1,36 @@
+extends ../layout.pug
+
+append links
+	link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css")
+
+append scripts
+	script(src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous")
+	script(src="../../js/utils.js")
+
+append styles
+	style
+		include ../../public/css/favos.css
+		include ../../public/css/sidebar.css
+	
+block content
+	div.container-fluid
+		div.row
+			div.col-lg-3
+				include ../sidebar.pug
+			.container.col
+				.row.container#main-content
+					each favo in favos
+						- var show_page_url ="window.location.href ='/favos/" + favo._id + "';";
+						.col-lg-3#cell-whole(onclick=show_page_url)
+							.container#cell-upper
+								#favo-img-div
+									- var img_url = favo.photo_url;
+									img#favo-img(src=img_url, alt="place photo")
+								p.favo-name= favo.name
+								p.favo-rating= favo.rating
+							.container#cell-lower
+								p.favo-users
+								
+
+	script(src="../../js/favos.js" favos=favos)
+	script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBuKUXPfazCgPzZo5IxPXd5eROvvIDqUzc&libraries=places" async defer)

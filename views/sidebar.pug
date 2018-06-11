@@ -1,0 +1,24 @@
+<nav class="col-md-3 d-none d-md-block bg-dark sidebar">
+    .container.sidebar-sticky
+        a.navbar-brand(href="/")
+            <i class='fas fa-map'></i> FavoPlaces
+        div.ul.navbar-nav.mr-auto.d-flex.justify-content-center#sidebar-items
+            li.nav-item: a.nav-link(href="/")
+                i.fas.fa-home
+                |   Home
+            li.nav-item: a.nav-link(href="/search")
+                i.fas.fa-search
+                |   Search
+            li.nav-item.active: a.nav-link(href='/favos')
+                i.fas.fa-heart
+                |   Favos
+            //- li.nav-item: a.nav-link(href='/register')
+            //-     i.fas.fa-user-plus
+            //-     |   Sign up
+            //- li.nav-item: a.nav-link(href='/login')
+            //-     i.fas.fa-sign-in-alt
+            //-     |   Login
+            li.nav-item: a.nav-link(href='/logout')
+                i.fas.fa-sign-out-alt
+                |   Logout
+</nav>

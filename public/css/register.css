@@ -1,0 +1,36 @@
+body {
+    background: -prefix-linear-gradient(left, black, grey); /* compat old browser */
+    background: linear-gradient(to right, black, grey); 
+}
+
+div.align-self-center {
+    width: 100%;
+    padding-bottom: 8rem;
+}
+
+#login-brand{
+    color: white;
+    font-weight: 800;
+    font-size:2rem;
+}
+
+div.container {
+    height: 100%;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+form button {
+    width: 100%;
+    padding-bottom: 2rem;
+}
+
+#register-head {
+    padding: 0.5rem 0 1rem 0;
+}
+
+#register-head p {
+    font-size: larger;
+    font-weight: 600;
+}
+
+

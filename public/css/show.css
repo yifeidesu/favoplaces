@@ -1,0 +1,63 @@
+div.col-lg-9 {
+    padding: 1rem 4rem;
+}
+
+#favo-rating {
+    color: orange;
+    font-weight: 500;
+}
+
+#favo-users {
+    font-weight: 500;
+}
+
+#more-info{
+    font-weight:500; 
+    color: blueviolet;
+}
+
+#content-container {
+    padding: 2rem 8rem 0 4rem;
+}
+
+#place-image {
+    height: 200px;
+    width:100%;
+    background-image: url('https://images.unsplash.com/photo-1487004121828-9fa15a215a7a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8a07b117b05f357c47bbf6c731815119&auto=format&fit=crop&w=1050&q=80');
+    background-position: center center;
+}
+
+#reviews {
+    margin: 2rem auto;
+}
+
+#name {
+    padding-bottom: 1rem;
+}
+
+#more-info .fas {
+    width: 2rem;
+}
+
+#favo-rating span {
+    padding-right: 1rem;
+}
+
+div#reviews #author-name {
+    margin-bottom: 0;
+}
+
+div#reviews #text {
+    padding-top: 0;
+    font-size: smaller;
+    font-weight: 500;
+}
+
+.fas.fa-user-circle {
+    font-size: larger;
+    color: #bdbdbd;
+    padding-right: 0.5rem;
+}
+
+
+

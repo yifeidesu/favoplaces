@@ -1,0 +1,23 @@
+extends layout.pug
+append styles
+	style
+		include ../public/css/register.css
+
+block content
+	include topbar.pug
+	.container.col-lg-3.d-flex.align-items-center
+		.align-self-center
+			div.flex-column#register-head
+				.navbar-brand#login-brand
+					<i class='fas fa-map'></i> FavoPlaces
+				p Sign up
+			<form action='/register' method='POST'>
+				div.form-group
+					label(for="usernameInput") Email address
+					input.form-control(name='username' type="text" id="usernameInput" placeholder="Username")
+				<div class="form-group">
+					<label for="exampleInputPassword1">Password</label>
+					<input type="password" name='password' class="form-control" id="exampleInputPassword1" placeholder="Password">
+				</div>
+				<button type="submit" class="btn btn-primary">Sign up</button>
+			</form>

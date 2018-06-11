@@ -1,0 +1,45 @@
+extends ../layout.pug
+append styles
+    style
+        include ../../public/css/sidebar.css
+        include ../../public/css/show.css
+append scripts
+    script
+        include ../../public/js/utils.js
+        
+block content
+    
+    <div class="container-fluid">
+        <div class="row">
+            div.col-lg-3
+                include ../sidebar.pug
+            div.col-lg-9
+                .div#content-container
+                    .display-3#name= favo.name
+                    p Picked by 
+                        span#favo-users
+                    div#more-info
+                        p#address
+                        p#phone
+                        p#website
+                    p#favo-rating=favo.rating   
+                    div#place-image                 
+                    div#reviews
+                div#map
+        </div>
+    </div>
+
+    script.
+        var favo = "#{JSON.stringify(favo)}";
+        var authors = "#{JSON.stringify(favo.authors)}";
+        var rating = #{favo.rating};
+
+    - var MAPKEY = process.env.MAPKEY;
+    - var endpoint = "https://maps.googleapis.com/maps/api/js?key=" + MAPKEY + "&libraries=places&callback=initMap";
+    
+    script(src="../../js/show.js")
+    script(async defer src=endpoint)
+
+
+
+    

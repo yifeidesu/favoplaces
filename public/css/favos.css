@@ -1,0 +1,92 @@
+body{
+    background-color: rgba(245, 245, 245);
+}
+
+#main-content{
+    display: inline-block;
+    width: 100%;
+    margin: 0;
+    padding: 4rem 2rem;
+}
+
+#main-content row {
+    margin: 0;
+    width: 100%;
+    display: block;
+    padding: 0 4rem;
+}
+
+#cell-whole{
+    display: inline-block;
+    margin: 0;
+    padding: 1rem;
+    overflow: hidden;
+    max-width: 30%;
+}
+
+#cell-upper {
+    padding: 0.8rem 0.8rem 0.4rem;
+    background-color: white;
+    box-shadow: 1px 1px 2px rgb(230, 230, 230); 
+}
+
+#cell-lower {
+    padding: 0.5rem 0.8rem;
+    font-size: inherit;
+    font-weight: 500;
+}
+
+#favo-img-div {
+    width: 100%;
+    padding-bottom: 0.5rem;
+}
+
+#favo-img {
+    height: 8rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.favo-name{
+    font-weight: bold;
+}
+
+.favo-rating {
+    color:rgb(255, 208, 0);
+}
+
+.favo-name, .favo-rating {
+    margin-bottom: 0.25rem;
+    font-size: small;
+}
+
+.favo-users i {
+    color: red;
+}
+
+.favo-users span {
+    font-weight: 500;
+    font-size: inherit;
+}
+
+.favo-users{
+    color: grey;
+    font-size: 0.9rem;
+    margin-bottom: 0;
+    
+}
+
+.favo-users span {
+    color: black;
+    font-weight: 600;
+}
+
+div a.btn.btn-link {
+    font-size: 0.9rem;
+    padding: 0;
+}
+
+
+
+
+

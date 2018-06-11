@@ -1,0 +1,26 @@
+ul.navbar-nav.mr-auto {
+    padding-top: 0.25rem;
+}
+
+a.navbar-brand {
+    padding-bottom: 4px!important;
+    font-weight: 800;
+    padding: 0 2rem 0 0;
+}
+
+li.nav-item.active {
+    font-weight: 500;
+    border-bottom: 5px solid #18FFFF;
+}
+
+li.nav-item:hover {
+    border-bottom: 5px solid rgba(24, 255, 255, 0.5);
+}
+
+li.nav-item  {
+    border-bottom: 5px solid rgba(0, 0, 0, 0);
+}
+
+li.nav-item a {
+    
+}
