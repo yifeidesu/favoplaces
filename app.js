@@ -34,11 +34,10 @@ passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
-mongoose.connect("mongodb://localhost/mapapp");
+mongoose.connect(process.env.DBURL);
 
 app.use(indexRoutes);
 app.use('/favos', favosRoutes);
-
 
 var listener = app.listen(process.env.PORT || 8080, process.env.IP, () => {
     console.log('SERVER STARTED! PORT = ' + listener.address().port);
