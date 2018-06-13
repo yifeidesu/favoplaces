@@ -21,18 +21,6 @@ var users = [
 ];
 
 var seeds = [
-
-  {
-    place_id: "ChIJB3HkvWwQljURDuc37KQsPoY",
-    name: "Qingdao Jingfugong South Korean Cuisine",
-    address: "43 Hong Kong W Rd, Shinan Qu, Qingdao Shi, Shandong Sheng, China, 266071",
-    rating: 3.7,
-    position: "(36.0575346, 120.36803179999993)",
-    photo_url: "https://maps.googleapis.com/maps/api/place/js/PhotoService.GetPhoto?1sCmRaAAAA0No2vjLjVCi_n_I3kWYQhmZokStR7uvu38N8zdNozwDB4M1SBdZBMg57cFiMCbhTR7FgAZ04nxPcKFDeM1Z5cMYahobU4TOP-WElR66k9rKJMMdhNRzIFuziSj8DxwM4EhBWgYH3w365C6y9fgbFdvJnGhQUS8kgeUSH1nNozlbzJO1TbzhotA&4u100&5m1&2e1&key=AIzaSyBuKUXPfazCgPzZo5IxPXd5eROvvIDqUzc&callback=none&token=32250",
-    is_favo: true,
-    authors: []
-  },
-
   {
     place_id: "ChIJcSuaJIg2K4gRP08a2TbYwCo",
     name: "Coffee Tree Roastery",
