@@ -1,11 +1,3 @@
-
-
-  .feather {
-    width: 16px;
-    height: 16px;
-    vertical-align: text-bottom;
-  }
-
   /*
    * Sidebar
    */
@@ -17,6 +9,7 @@
   left: 0;
   z-index: 100; /* Behind the navbar */
   padding: 48px 0 0; /* Height of navbar */
+  background-color: rgb(212, 255, 242);
   box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
 }
   
@@ -28,6 +21,8 @@
     overflow-x: hidden;
     overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
   }
+
+
   
   @supports ((position: -webkit-sticky) or (position: sticky)) {
     .sidebar-sticky {
@@ -37,46 +32,38 @@
   }
 
 a.navbar-brand {
-    font-weight: 800;
-    padding: 0 2rem 4rem 2rem;
-    color: white!important;
+	opacity: 0.7;
+	font-size: 2rem;
+	font-weight: 600;
+	padding: 0 2rem 4rem 2rem;
 }
 
 li.nav-item {
-  padding: 0 2rem;
-    border-right: 5px solid rgba(0, 0, 0, 0);
+	letter-spacing: 2px;
+	font-size: 1.2rem;
+	font-weight: 600;
+	padding: 0 2rem;
+	border-right: 5px solid rgba(0, 0, 0, 0);
 }
 
 li.nav-item.active {
-    border-right: 5px solid #18FFFF;
-
+    border-right: 5px solid black;
 }
 
 li.nav-item:hover {
-    border-right: 5px solid rgba(24, 255, 255, 0.5);
+    border-right: 5px solid rgba(0, 0, 0, 0.2);
 }
 
 
 .sidebar .nav-link {
-    
     font-weight: 500;
-    color: rgba(255, 255, 255, .5);
+	color: rgba(255, 255, 255, .5);
 }
-  .sidebar .nav-link .feather {
-    margin-right: 4px;
-    color: #999;
-  }
-
   
-  .sidebar .nav-link:hover .feather,
-  .sidebar .nav-link.active .feather {
-    color: inherit;
-  }
-  
-  .sidebar-heading {
-    font-size: .75rem;
-    text-transform: uppercase;
-  }
+.sidebar-heading {
+	font-size: .75rem;
+	text-transform: uppercase;
+}
   
   /*
    * Content
@@ -90,14 +77,6 @@ li.nav-item:hover {
    * Navbar
    */
   
-  /* .navbar-brand {
-    padding-top: .75rem;
-    padding-bottom: .75rem;
-    font-size: 1rem;
-    color: white;
-    
-  }
-   */
   .navbar .form-control {
     padding: .75rem 1rem;
     border-width: 0;

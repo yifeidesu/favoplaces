@@ -1,6 +1,6 @@
 body {
     background: -prefix-linear-gradient(left, black, grey); /* compat old browser */
-    background: linear-gradient(to right, black, grey); 
+    background: linear-gradient(to right, rgb(0, 255, 179), rgb(212, 255, 242)); 
 }
 
 div.align-self-center {
@@ -9,14 +9,14 @@ div.align-self-center {
 }
 
 #login-brand{
-    color: white;
+   
     font-weight: 800;
     font-size:2rem;
 }
 
 div.container {
     height: 100%;
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(0, 0, 0, 0.6);
 }
 
 form button {
