@@ -17,11 +17,11 @@ block content
 		div.row
 			div.col-lg-3
 				include ../sidebar.pug
-			.container.col
-				.row.container#main-content
+			.container.col-lg-9
+				.row.container#main-content.float-right
 					each favo in favos
 						- var show_page_url ="window.location.href ='/favos/" + favo._id + "';";
-						.col-lg-3.cell-whole
+						.col-lg-4.cell-whole
 							div.cell-content
 								.container.cell-upper
 									.img-div
