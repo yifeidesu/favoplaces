@@ -9,10 +9,10 @@ place_id = favo.place_id;
 
 var url = '';
 
-var favoUsersString = favoUsersString(authors_jso);
-$('#favo-users').text(favoUsersString);
+//var favoUsersString = favoUsersString(authors_jso);
+//$('#users').text(favoUsersString);
 
-$('#favo-rating').html(ratingHtml(rating));
+//$('#rating').html(ratingStarsHtml(ratingStarsHtml));
 
 
 /**
@@ -26,7 +26,7 @@ function initMap() {
 
     var infowindow = new google.maps.InfoWindow();
     var service = new google.maps.places.PlacesService(map);
-  
+
 
     service.getDetails({
         placeId: place_id
@@ -40,6 +40,18 @@ function initMap() {
         $('#phone').html('<span><i class="fas fa-phone"></i></span> ' + place.formatted_phone_number);
         setWebsite(place);
         setReviews(place);
+
+        var ratingNumber = favo.rating;
+        console.log('===');
+        console.log('===');
+        console.log('===');
+        
+        console.log(ratingNumber);
+        
+        var ratingHtml = ratingNumber + ' ' + ratingStarsHtml(ratingNumber);
+        console.log(ratingHtml);
+        
+        $('#rating').html(ratingHtml);
 
         if (status === google.maps.places.PlacesServiceStatus.OK) {
             var marker = new google.maps.Marker({
@@ -87,4 +99,13 @@ function reviewItemHtml(review) {
     return review_html =
         '<div><p id="author-name">' + author_name + '</p>'
         + '<p id="text">' + text + '</p></div>';
+}
+
+function ratingStarsHtml(ratingNumber) {
+    var starIcon = '<i class="fas fa-star"></i> ';
+    var ratingIcons = '';
+    for (var i = 0; i < ratingNumber; i++) {
+        ratingIcons += starIcon;
+    }
+    return ratingIcons;
 }

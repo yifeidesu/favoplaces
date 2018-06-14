@@ -11,17 +11,22 @@
     display: block;
 }
 
-#cell-whole{   
+.cell-whole{   
     display: inline-block;
     margin: 0;
     padding: 0 1rem 2rem 1rem;
     overflow: hidden;
     max-width: 33%;
+    cursor: pointer;
 }
 
-#cell-content {
+.cell-content {
 	border: 0.5px solid #D8D8D8;
     box-shadow: 2px 2px 2px #D8D8D8;
+}
+
+.cell-content:hover {
+    box-shadow: 4px 4px 4px #D8D8D8;
 }
 
 .cell-upper {

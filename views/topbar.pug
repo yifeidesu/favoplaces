@@ -1,4 +1,4 @@
-.nav.navbar.navbar-expand-lg.navbar-light.d-flex.justify-content-center#topbar
+.navbar.navbar-expand-lg.navbar-light.d-flex.justify-content-center#topbar
 	.container
 		<div class="navbar-header">
 			<a class="navbar-brand" href="/"><i class='fas fa-map'></i> FavoPlaces</a>
@@ -27,11 +27,13 @@
 				li.nav-item: a.nav-link(href='/logout')
 					i.fas.fa-sign-out-alt
 					|   Logout
+
+
 script.
 	console.log('** FROM topbar.pug **');
 	$(".nav-item").click(function() {
 		$( this ).addClass( "active" );
 		var classes = $(this).attr('class');
-		console.log('** from topbar.pug **' + classes);
+		
 	});
 			
