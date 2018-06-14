@@ -7,24 +7,30 @@ var p_name_all = $('.favo-name');
 var p_address_all = $('.favo-address');
 var div_photo_all = $('#favo-img-div');
 
-favos.forEach(function (favo, i) {
+var len = favos.length;
+
+for (var i = 0; i < len; i++) {
+    // var p = p_all[i];
+    // var favo = favos[len-1-i];
+
+    // favos.forEach(function (favo, i) {
 
     // set content to p.favo-uesrs
     var p_users = p_users_all[i];
-    var html_users = '<i class="fas fa-heart"></i> by <span>' + favoUsersString(favo) + '</span>';
+    var html_users = '<i class="fas fa-heart"></i> by <span>' + favoUsersString(favos[len-1-i]) + '</span>';
     $(p_users).html(html_users);
 
     // set content to p.favo-name
     var p_name = p_name_all[i];
-    var name = textCut(favo.name, 25);
+    var name = textCut(favos[len-1-i].name, 25);
     $(p_name).text(name);
 
     // set content to p.favo-address
-    var show_link = '/favos/' + favo._id;
-    var address = textCut(favo.address, 50) + '<a href=' + show_link + '> <u>more</u></a>';
+    var show_link = '/favos/' + favos[len-1-i]._id;
+    var address = textCut(favos[len-1-i].address, 50) + '<a href=' + show_link + '> <u>more</u></a>';
     $(p_address_all[i]).html(address);
 
-    var photo_url = favo.photo_url;
+    var photo_url = favos[len-1-i].photo_url;
     //console.log(i + photo_url);
 
     if (photo_url) {
@@ -37,7 +43,7 @@ favos.forEach(function (favo, i) {
         // $(div_photo_all[i]).html(img_html);
         // console.log('todom' + todom);
     }
-});
+}
 
 // favo image copy from search page 
 //move to favos index

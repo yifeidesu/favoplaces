@@ -8,9 +8,11 @@ var User = require('../models/user');
 var place_ids = [];
 var favo_places = [];
 
+var middlewares = require('../middleware/middlewares.js');
 
 router.get('/', (req, res) => {
-    res.redirect('/favos');
+    res.render('home');
+    //res.redirect('/favos');
 });
 
 router.post('/register', (req, res) => {
@@ -52,7 +54,7 @@ router.post('/login', passport.authenticate('local', {
 });
 
 // SEARCH ROUTE
-router.get('/search', (req, res) => {
+router.get('/search', middlewares.isLoggedIn ,(req, res) => {
     Favo.find({}, function (err, favos) {
         favos.forEach((favo) => {
             place_ids.push(favo.place_id);

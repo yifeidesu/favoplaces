@@ -5,13 +5,15 @@ var router = express.Router();
 var Favo = require('../models/favo');
 var User = require('../models/user');
 
+var middlewares = require('../middleware/middlewares.js');
+
 var ratingString = require('../models/favoUtils');
 
 var place_ids = [];
 var favo_places = [];
 
 // route = favos/ method = post
-router.post('/', function (req, res) {
+router.post('/', middlewares.isLoggedIn, function (req, res) {
 
     var marker = req.body.marker;
     var user = req.user;
@@ -28,7 +30,7 @@ router.post('/', function (req, res) {
 });
 
 // ROOT DIRECT HERE, index
-router.get('/', isLoggedIn, function (req, res) {
+router.get('/', function (req, res) {
 
     Favo.find({}).populate('authors').exec(function (err, favos) {
         if (err) {
@@ -49,13 +51,5 @@ router.get('/:id', function (req, res) {
         }
     });
 });
-
-
-function isLoggedIn(req, res, next) {
-    if (req.isAuthenticated()) {
-        return next();
-    }
-    res.redirect('/login');
-}
 
 module.exports = router;

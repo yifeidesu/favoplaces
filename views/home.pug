@@ -1,0 +1,13 @@
+extend layout.pug
+
+append styles
+    style
+        include ../public/css/home.css
+
+block content
+    div#content
+        .display-3.d-flex.justify-content-center Welcome to
+        .display-1.d-flex.justify-content-center FavoPlaces
+        div.d-flex.justify-content-center
+            .btn.btn-lg(onclick="location.href='/favos'") Index
+            .btn.btn-lg(onclick="location.href='/search'") Search
