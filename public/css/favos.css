@@ -16,30 +16,31 @@
     margin: 0;
     padding: 0 1rem 2rem 1rem;
     overflow: hidden;
-	max-width: 33%;
+    max-width: 33%;
 }
 
 #cell-content {
 	border: 0.5px solid #D8D8D8;
-	box-shadow: 2px 2px 2px #D8D8D8;
+    box-shadow: 2px 2px 2px #D8D8D8;
 }
 
-#cell-upper {
+.cell-upper {
+    
     padding: 0.8rem 0.8rem 0.4rem;
 }
 
-#cell-lower {
+.cell-lower {
     padding: 0.5rem 0.8rem;
     font-size: inherit;
     font-weight: 500;
 }
 
-#favo-img-div {
+.img-div {
     width: 100%;
     padding-bottom: 0.5rem;
 }
 
-#favo-img {
+.favo-img {
     height: 10rem;
     width: 100%;
     object-fit: cover;

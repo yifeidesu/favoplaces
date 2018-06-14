@@ -9,7 +9,7 @@
   left: 0;
   z-index: 100; /* Behind the navbar */
   padding: 48px 0 0; /* Height of navbar */
-  background-color: rgb(212, 255, 242);
+  background-color:  rgb(0, 255, 179);
   box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
 }
   

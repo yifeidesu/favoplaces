@@ -1,12 +1,30 @@
-#content {
-    padding-top: 10vw;
-    width:100%;
-    height:100%;
+body {
     color: rgba(0, 0, 0, 0.8);
     background:linear-gradient(to right, rgb(0, 255, 179), rgb(212, 255, 242));
 }
 
-.btn {
+#topbar-home {
+    background: transparent;
+}
+
+.nav .btn {
+    font-size: 1.5rem;
+    color: rgba(0, 0, 0, 0.6);
+    background-color: transparent;
+}
+
+.nav .btn:hover {
+    font-weight: 800;
+}
+
+#content {
+    padding-top: 8vw;
+    width:100%;
+    height:100%;
+    
+}
+
+#content .btn {
     border-radius: 2rem;
     font-size: 2.5rem;
     letter-spacing: 2px;

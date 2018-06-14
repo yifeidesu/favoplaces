@@ -23,13 +23,13 @@ block content
 						- var show_page_url ="window.location.href ='/favos/" + favo._id + "';";
 						.col-lg-3#cell-whole(onclick=show_page_url)
 							div#cell-content
-								.container#cell-upper
-									#favo-img-div
+								.container.cell-upper
+									.img-div
 										- var img_url = favo.photo_url;
-										img#favo-img(src=img_url, alt="place photo")
-									p.favo-name= ''
-									p.favo-rating= favo.rating
-							.container#cell-lower
+										img.favo-img(src="",alt="place photo")
+									p.favo-name
+									p.favo-rating
+							.container.cell-lower
 								p.favo-users
 								
 

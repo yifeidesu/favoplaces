@@ -36,7 +36,7 @@ var seeds = [
     name: "Perkins Family Restaurant", address: "600 Dixon Rd, Etobicoke, ON M9W 1J1, Canada",
     rating: 3.7,
     position: "(43.6918454, -79.57281319999998)",
-    photo_url:'https://images.unsplash.com/photo-1476718406336-bb5a9690ee2a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=716729f150e7137d6873291d1ef9c9a4&auto=format&fit=crop&w=1534&q=80',
+    photo_url: 'https://images.unsplash.com/photo-1476718406336-bb5a9690ee2a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=716729f150e7137d6873291d1ef9c9a4&auto=format&fit=crop&w=1534&q=80',
     is_favo: true,
     "authors": []
   },
@@ -59,7 +59,7 @@ function seedDB() {
       console.log(err);
     }
 
-    console.log("removed favos!");
+    console.log("Cleaned up favo collection!");
 
     //add a few campgrounds
     seeds.forEach(function (seed) {
@@ -70,9 +70,8 @@ function seedDB() {
           console.log("added a favo");
           console.log('** seed ** FAVO.AUTHORS = ' + JSON.stringify(favo.authors));
           for (var i = 0; i < getRandomInt(4) + 1; i++) {
-            favo.authors.push(users[getRandomInt(4)]);
+            favo.authors.push(users[i]);
           }
-
           //favo.authors.push(users[getRandomInt(4)]);
           console.log('** seed ** FAVO.AUTHORS = ' + JSON.stringify(favo.authors));
           favo.save();
