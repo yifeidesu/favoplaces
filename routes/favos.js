@@ -21,7 +21,7 @@ router.get('/', function (req, res) {
         } else {
             // let user = req.user;
             // console.log('User = ' + user);
-            res.render("favos/favos", { favos: favos, currentUser: req.user });
+            res.render("favos/favos", { favos: favos, user: req.user });
         }
     });
 });
