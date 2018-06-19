@@ -11,6 +11,8 @@ var favo_places = [];
 var middlewares = require('../middleware/middlewares.js');
 
 router.get('/', (req, res) => {
+
+
     res.render('home');
     //res.redirect('/favos');
 });
@@ -37,14 +39,14 @@ router.get('/logout', (req, res) => {
  * REGISTER ROUTES
  */
 router.get('/register', (req, res) => {
-    res.render('register', {title: "Sign up | "});
+    res.render('register', { title: "Sign up | " });
 });
 
 /****************
  * LOGIN ROUTES *
  ****************/
 router.get('/login', (req, res) => {
-    res.render('login', { title: 'Login | '});
+    res.render('login', { title: 'Login | ' });
 });
 
 router.post('/login', passport.authenticate('local', {
@@ -54,13 +56,13 @@ router.post('/login', passport.authenticate('local', {
 });
 
 // SEARCH ROUTE
-router.get('/search', middlewares.isLoggedIn ,(req, res) => {
+router.get('/search', middlewares.isLoggedIn, (req, res) => {
     Favo.find({}, function (err, favos) {
         favos.forEach((favo) => {
             place_ids.push(favo.place_id);
         });
     });
-    res.render('search', { place_ids: place_ids, title: "Search | " });
+    res.render('search', { place_ids: place_ids, title: "Search | ", user: req.user });
 });
 
 module.exports = router;

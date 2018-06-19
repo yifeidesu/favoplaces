@@ -12,6 +12,20 @@ var ratingString = require('../models/favoUtils');
 var place_ids = [];
 var favo_places = [];
 
+
+// Index
+router.get('/', function (req, res) {
+    Favo.find({}).populate('authors').exec(function (err, favos) {
+        if (err) {
+            console.log(err);
+        } else {
+            // let user = req.user;
+            // console.log('User = ' + user);
+            res.render("favos/favos", { favos: favos, currentUser: req.user });
+        }
+    });
+});
+
 // route = favos/ method = post
 router.post('/', middlewares.isLoggedIn, function (req, res) {
 
@@ -29,17 +43,6 @@ router.post('/', middlewares.isLoggedIn, function (req, res) {
     });
 });
 
-// ROOT DIRECT HERE, index
-router.get('/', function (req, res) {
-
-    Favo.find({}).populate('authors').exec(function (err, favos) {
-        if (err) {
-            console.log(err);
-        } else {
-            res.render("favos/favos", { favos: favos });
-        }
-    });
-});
 
 // SHOW - show more about one favo place.
 router.get('/:id', function (req, res) {

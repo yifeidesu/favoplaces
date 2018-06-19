@@ -18,15 +18,18 @@
 				li.nav-item: a.nav-link(href='/favos')
 					i.fas.fa-heart
 					|   Favos
-				//- li.nav-item: a.nav-link(href='/register')
-				//-     i.fas.fa-user-plus
-				//-     |   Sign up
-				//- li.nav-item: a.nav-link(href='/login')
-				//-     i.fas.fa-sign-in-alt
-				//-     |   Login
-				li.nav-item: a.nav-link(href='/logout')
-					i.fas.fa-sign-out-alt
-					|   Logout
+
+				- if(!user)
+					li.nav-item: a.nav-link(href='/register')
+						i.fas.fa-user-plus
+						|   Sign up
+					li.nav-item: a.nav-link(href='/login')
+						i.fas.fa-sign-in-alt
+						|   Login
+				- else
+					li.nav-item: a.nav-link(href='/logout')
+						i.fas.fa-sign-out-alt
+						|   Logout
 
 
 script.

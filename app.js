@@ -7,6 +7,8 @@ const passportLocalMongoose = require('passport-local-mongoose');
 const expressSession = require('express-session');
 const pug = require('pug');
 
+require('dotenv').config();
+
 // models
 const Favo = require("./models/favo");
 const User = require('./models/user');
