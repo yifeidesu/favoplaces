@@ -23,8 +23,6 @@ function initMap() {
   map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
 
 
-
-
   infowindow = new google.maps.InfoWindow();
   // nearbySearch(center, keyword);
 

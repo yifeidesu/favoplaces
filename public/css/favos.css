@@ -45,8 +45,8 @@
     padding-bottom: 0.5rem;
 }
 
-.favo-img {
-    height: 10rem;
+.favo-img {  
+    height: 10em;
     width: 100%;
     object-fit: cover;
 }

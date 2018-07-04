@@ -1,10 +1,11 @@
 #topbar {
     color: rgba(0,0,0,0.8);
-    background-color: rgb(212, 255, 242); 
+    padding: 0.5rem 6rem;
+    /* background-color: rgb(212, 255, 242);  */
 }
 
 ul.navbar-nav.mr-auto {
-    padding-top: 0.25rem;
+    padding-top: 0.25em;
 }
 
 .navbar {
@@ -13,21 +14,22 @@ ul.navbar-nav.mr-auto {
     border: 0;
     border-radius: 0;
     margin-bottom: 0;
-    font-size: 1.5rem;
+    font-size: 1em;
     letter-spacing: 2px;
 }
 
 a.navbar-brand {
+    letter-spacing: 0;
     opacity: 0.8;
     padding-bottom: 4px!important;
     font-size: 1.5rem;
     font-weight: 600;
-    padding: 0 2rem 0 0;
+    margin: 0;
+    padding: 0;
 }
 
-li.nav-item.active {
-    font-weight: 500;
-    border-bottom: 5px solid black;
+li.nav-item.active a {
+    color: blue!important;
 }
 
 li.nav-item:hover {
@@ -35,6 +37,8 @@ li.nav-item:hover {
 }
 
 li.nav-item  {
-    font-size: 1rem;
+    font-size: 0.9em;
+    font-weight: 600;
     letter-spacing: 2px;
+    padding: 0 0.5em;
 }

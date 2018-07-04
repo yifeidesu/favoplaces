@@ -50,7 +50,7 @@ router.get('/:id', function (req, res) {
         if (err) {
             console.log(err);
         } else {
-            res.render("favos/show", { favo: foundFavo });
+            res.render("favos/show", { favo: foundFavo, user: req.user });
         }
     });
 });

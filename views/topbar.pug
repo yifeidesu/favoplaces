@@ -1,40 +1,36 @@
-.navbar.navbar-expand-lg.navbar-light.d-flex.justify-content-center#topbar
-	.container
-		<div class="navbar-header">
-			<a class="navbar-brand" href="/"><i class='fas fa-map'></i> FavoPlaces</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-		</div>
+.navbar.navbar-expand-lg.navbar-light#topbar
+	
+	<div class="navbar-header">
+		<a class="navbar-brand" href="/"><i class='fas fa-map'></i> FavoPlaces</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+	</div>
 
-		div.collapse.navbar-collapse#navbarSupportedContent
-			ul.navbar-nav.mr-auto
-				li.nav-item: a.nav-link(href="/")
-					i.fas.fa-home
-					|   Home
-				li.nav-item.active: a.nav-link(href="/search")
-					i.fas.fa-search
-					|   Search
-				li.nav-item: a.nav-link(href='/favos')
-					i.fas.fa-heart
-					|   Favos
-
-				- if(!user)
-					li.nav-item: a.nav-link(href='/register')
-						i.fas.fa-user-plus
-						|   Sign up
-					li.nav-item: a.nav-link(href='/login')
-						i.fas.fa-sign-in-alt
-						|   Login
-				- else
-					li.nav-item: a.nav-link(href='/logout')
-						i.fas.fa-sign-out-alt
-						|   Logout
-
+	div.collapse.navbar-collapse.justify-content-center#navbarSupportedContent
+		ul.navbar-nav.justify-content-center
+			li.nav-item: a.nav-link(href="/") HOME
+			li.nav-item: a.nav-link(href="/search") SEARCH
+			li.nav-item: a.nav-link(href='/favos') FAVOES
+	div
+		ul.navbar-nav
+			- if(!user)
+				li.nav-item: a.nav-link(href='/register')
+					i.fas.fa-user-plus
+					|   Sign up
+				li.nav-item: a.nav-link(href='/login')
+					i.fas.fa-sign-in-alt
+					|   Login
+			- else
+				li.nav-item: a.nav-link(href='/logout')
+					i.fas.fa-sign-out-alt
+					|   Logout
 
 script.
 	$(".nav-item").click(function() {
 		$( this ).addClass( "active" );
 		var classes = $(this).attr('class');
 	});
-			
+
+script
+	include ../public/js/topbar.js
