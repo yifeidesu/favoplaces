@@ -1,13 +1,15 @@
 doctype html
 html
   head
-    title #{title}Favo Places
+    link(rel="icon" href="../public/favicon.png" type="image/png")
+    title #{title}FavoPlaces
 
     block links
+
       link(type='text/html' rel='stylesheet', href='/stylesheets/style.css')
       link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous")
       link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css")
-      link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu")
+      link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Signika")
     block styles
       style
         include ../public/css/index.css
@@ -17,6 +19,5 @@ html
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>  
 
   body
-    //--include ./topbar.pug
     block content
     block scripts-bottom

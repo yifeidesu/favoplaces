@@ -14,6 +14,20 @@ var favoschma = new mongoose.Schema({
             ref: "User"
         },
         username: String
+    }],
+    comments: [{
+        id: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "Comment"
+        },
+        text: String,
+        author: {
+            id: {
+                type: mongoose.Schema.Types.ObjectId,
+                ref: "User"
+            },
+            username: String
+        }
     }]
 });
 

@@ -36,3 +36,4 @@ function textCut(str, len){
 
     return str;
 }
+

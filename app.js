@@ -7,7 +7,8 @@ const passportLocalMongoose = require('passport-local-mongoose');
 const expressSession = require('express-session');
 const pug = require('pug');
 
-
+var favicon = require('serve-favicon');
+var path = require('path');
 
 require('dotenv').config();
 
@@ -23,6 +24,8 @@ const seedDB = require("./seeds");
 seedDB();
 
 const app = express();
+
+app.use(favicon(path.join(__dirname, 'public/assets', 'favicon.ico')));
 
 app.set('view engine', 'pug');
 app.use(bodyParser.urlencoded({ extended: true }));

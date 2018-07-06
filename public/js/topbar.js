@@ -1,4 +1,3 @@
-console.log(window.location.pathname);
 switch (window.location.pathname) {
     case '/favos':
         $(".nav-item:contains('FAVOES')").addClass('active');
@@ -8,4 +7,9 @@ switch (window.location.pathname) {
         break;
     default:
         $(".nav-item:contains('/favos')").addClass('active');
+}
+
+const pathname = window.location.pathname;
+if (pathname.includes('favo')) {
+    $(".nav-item:contains('FAVOES')").addClass('active');
 }

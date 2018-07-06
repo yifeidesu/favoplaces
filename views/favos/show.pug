@@ -1,43 +1,74 @@
 extends ../layout.pug
 append styles
     style
-        include ../../public/css/sidebar.css
+        include ../../public/css/topbar.css
         include ../../public/css/show.css
 append scripts
     script
         include ../../public/js/utils.js
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
         
 block content
+    include ../topbar.pug
     
-    <div class="container-fluid">
-        <div class="row">
-            div.col-lg-3
-                include ../sidebar.pug
-            div.col-lg-9
-                .div#content-container
-                    .display-3#name= favo.name
-                    p Picked by 
+    div#content-container
+        div#place-image   
+            h1#name= favo.name
+
+        .row
+            .col-lg-4
+                .card
+                    p
+                        i.fas.fa-heart
+                        |  by 
                         span#users
                     div#more-info
                         p#address
                         p#phone
                         p#website
                     p#rating 
-                    div#place-image                 
-                    div#reviews
-                div#map
-        </div>
-    </div>
+            .col-lg-8
+                .card
+                    - if(!user)
+                        .d-flex.justify-content-between.align-items-center.login-div
+                            span.hint What are you thinking? Log in or sign up.
+                            div
+                                a(href="/login").btn.btn-primary Log in
+                                a(href="/register").btn.btn-light Sign up
+                    - else
+                        
+                        div.form-group
+                            - var cmtPostUrl = "/favos/" + favo._id +"/comments";
+                            form(action=cmtPostUrl method='POST')
+                                <label for="comment">Comment:</label>
+                                <textarea class="form-control" rows="2" id="comment" name="comment[text]" placeholder="Say something..."></textarea>
+                                .float-right
+                                    button.btn.btn-primary Submit
+                                    button.btn.btn-light Cancel
+                    div.vertical-border
+                        p.cmt-label Comments from This Site
+                        div#reviewsDB
+                    
+                    div
+                        p.cmt-label Comments from Google Map
+                        div#reviews
+    div#map
+    
 
     script.
         var favo = "#{JSON.stringify(favo)}";
         var authors = "#{JSON.stringify(favo.authors)}";
         var rating = #{favo.rating};
+        
 
     - var MAPKEY = process.env.MAPKEY;
     - var endpoint = "https://maps.googleapis.com/maps/api/js?key=" + MAPKEY + "&libraries=places&callback=initMap";
-    
-    script(src="../../js/show.js")
+    script.
+        var MAPKEY = "#{MAPKEY}";
+    script
+        include ../../public/js/show.js
+
     script(async defer src=endpoint)
 
 

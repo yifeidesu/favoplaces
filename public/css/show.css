@@ -1,10 +1,39 @@
-div.col-lg-9 {
-    padding: 1rem 4rem;
+#content-container {
+    padding: 0rem 12rem;
+}
+
+#place-image {
+    margin-top: 1em;
+    padding: 2em;
+    opacity: 50%;
+    height: 40vh;
+    width:100%;
+    background-image: url('https://images.unsplash.com/photo-1487004121828-9fa15a215a7a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8a07b117b05f357c47bbf6c731815119&auto=format&fit=crop&w=1050&q=80');
+    background-position: center center;
+}
+
+#name {
+    line-height: 1.2em;
+    display: inline-flex;
+    background-color: rgba(240, 248, 255, 0.8);
+}
+
+.card {
+    margin-top: 1em;
+    padding: 1em;
+    border-radius: 4px;
+    box-shadow: #bdbdbd;
+}
+
+.fas.fa-heart {
+    color: red;
 }
 
 #rating {
     color: orange;
     font-weight: 500;
+    margin-bottom: 0;
+    line-height: 1em;
 }
 
 #favo-users {
@@ -16,38 +45,50 @@ div.col-lg-9 {
     color: blueviolet;
 }
 
-#content-container {
-    padding: 2rem 8rem 0 4rem;
+#reviewsDB + p {
+    margin: 0 auto;
+    padding-top: 1em;
 }
 
-#place-image {
-    height: 200px;
-    width:100%;
-    background-image: url('https://images.unsplash.com/photo-1487004121828-9fa15a215a7a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8a07b117b05f357c47bbf6c731815119&auto=format&fit=crop&w=1050&q=80');
-    background-position: center center;
+.vertical-border {
+    border-top: rgba(0, 0, 0, .1) solid 1px;
+    border-bottom: rgba(0, 0, 0, .1) solid 1px;
 }
 
-#reviews {
-    margin: 2rem auto;
+.login-div {
+    padding: 0.5em 0 2em 0;
+    /* border-bottom: rgba(0, 0, 0, .1) solid 1px; */
 }
 
-#name {
-    padding-bottom: 1rem;
+.cmt-label {
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    font-size: 0.8em;
+    font-style: italic;
+    color: rgba(0, 0, 0, .6);
+}
+
+.hint {
+    opacity: 0.5;
+}
+
+.btn {
+    padding: 0 1em;
+    margin: 0.5em;
 }
 
 #more-info .fas {
-    width: 2rem;
+    width:1em;
 }
 
 #favo-rating span {
     padding-right: 1rem;
 }
-
-div#reviews #author-name {
+.author-name {
     margin-bottom: 0;
 }
 
-div#reviews #text {
+.cmt-text {
     padding-top: 0;
     font-size: smaller;
     font-weight: 500;
@@ -58,6 +99,4 @@ div#reviews #text {
     color: #bdbdbd;
     padding-right: 0.5rem;
 }
-
-
 

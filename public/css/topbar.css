@@ -1,6 +1,8 @@
 #topbar {
     color: rgba(0,0,0,0.8);
-    padding: 0.5rem 6rem;
+    padding: .8rem 8rem;
+    border-bottom: 4px solid rgba(0,0,0,.05);
+    /* box-shadow: 0 0 3px rgba(0,0,0,.14), 0 3px 6px rgba(0,0,0,.28); */
     /* background-color: rgb(212, 255, 242);  */
 }
 
@@ -32,13 +34,13 @@ li.nav-item.active a {
     color: blue!important;
 }
 
-li.nav-item:hover {
-    border-bottom: 5px solid rgba(0, 0, 0, 0.2);
+li.nav-item a:hover {
+    color: rgba(0, 0, 255, 0.4)!important;
 }
 
 li.nav-item  {
-    font-size: 0.9em;
+    font-size: 0.8em;
     font-weight: 600;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     padding: 0 0.5em;
 }

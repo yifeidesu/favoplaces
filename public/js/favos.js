@@ -29,7 +29,12 @@ favos.forEach(function (favo, i) {
 
     // set img url
     var photo_url = favo.photo_url;
-    $(imgFavoAll[i]).attr('src', photo_url);
+    if(photo_url) {
+        $(imgFavoAll[i]).attr('src', photo_url);
+    }else {
+        $(imgFavoAll[i]).attr('src', '../assets/sweetpattern.jpg');
+    }
+    
 
     // set content to p.favo-uesrs
     var html_users = '<i class="fas fa-heart"></i> by <span>' + favoUsersString(favo) + '</span>';

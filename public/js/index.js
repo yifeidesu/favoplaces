@@ -1,5 +1,3 @@
-import { addMarker, addSeeds } from '../js/mapUtils.js';
-
 function initialize() {
     var newmarket = { lat: -33.8688, lng: 151.2195 };
     var mapEl = document.getElementById('map'); // dom element 
@@ -21,5 +19,3 @@ function initialize() {
 
 google.maps.event.addDomListener(window, 'load', initialize);
 console.log('map js executed!');
-
-

@@ -11,10 +11,7 @@ var favo_places = [];
 var middlewares = require('../middleware/middlewares.js');
 
 router.get('/', (req, res) => {
-
-
-    res.render('home');
-    //res.redirect('/favos');
+    res.redirect('/favos');
 });
 
 router.post('/register', (req, res) => {
