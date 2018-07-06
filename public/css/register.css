@@ -1,24 +1,22 @@
 body {
     height: 100%;
-    background-image: url("../assets/sweetpattern.jpg");
+    /* background-image: url("../assets/sweetpattern.jpg"); */
     background-size: cover;
-    /* background: -prefix-linear-gradient(left, black, grey); /* compat old browser */
-   /* background: linear-gradient(to right, rgb(0, 255, 179), rgb(212, 255, 242));  */
 }
 
 .row {
     height: 100%;
 }
 
-.bg-login {
-    opacity: .5;
-    /* background-image: url("../assets/sweetpattern.jpg");
-    background-size: cover; */
-    height: inherit;
+.bg-1 {
+    background-image: repeating-linear-gradient(-45deg, transparent, transparent 25px, 
+    blue 25px, blue 50px);
+    height: 100vh;
+    
 }
 
-.bg-login-content {
-    background-color: rgba(255, 255, 255, .8)
+.bg-2 {
+    background-color: rgba(255, 255, 255, .8);
 }
 
 div.align-self-center {
@@ -26,10 +24,9 @@ div.align-self-center {
     padding-bottom: 8rem;
 }
 
-#login-brand{
-   
+#login-brand {
     font-weight: 800;
-    font-size:2rem;
+    font-size: 2rem;
 }
 
 div.container {
@@ -37,9 +34,21 @@ div.container {
     color: rgba(0, 0, 0, 0.6);
 }
 
-form button {
+/* form button {
     width: 100%;
     padding-bottom: 2rem;
+    background-color: blueviolet;
+} */
+
+button.btn {
+    width: 100%;
+    color: white!important;
+    background-color: blue;
+}
+
+button + p {    
+    margin-top: 1em;
+    margin-bottom: .5em;
 }
 
 #register-head {
@@ -60,5 +69,3 @@ form button {
 .nav-item a {
     color: rgba(0, 0, 0, 0.6);
 }
-
-

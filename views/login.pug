@@ -11,15 +11,15 @@ block content
 	//- include topbar.pug
 	//- display-1= url
 	.row
-		.col-lg-6.bg-login
-		.col-lg-6.bg-login-content
+		.col-2.bg-1.d-none.d-lg-block
+		.col.bg-2
 			div
 				.navbar.d-flex.justify-content-end
 					.nav-item: a.nav-link(href='/favos') Index
 					.nav-item: a.nav-link(href='/register') Sign up
 					
-				.container.d-flex.align-items-center.col-lg-6
-					.align-self-center
+				.container.d-flex.justify-content-start
+					.col-lg-4.align-self-center
 						div.flex-column#register-head
 							.navbar-brand#login-brand
 								<i class='fas fa-map'></i> FavoPlaces
@@ -36,5 +36,9 @@ block content
 								<input type="checkbox" class="form-check-input" id="exampleCheck1">
 								<label class="form-check-label" for="exampleCheck1">Remember me</label>
 							</div>
-							<button type="submit" class="btn btn-primary">Login</button>
+							<button type="submit" class="btn">SIGN IN</button>
+							p: a(href="/register") Forget password
+							p
+								span New?  
+								a(href="/register") SIGN UP
 						</form>
