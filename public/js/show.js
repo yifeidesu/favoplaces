@@ -5,15 +5,9 @@ var placeId = 'ChIJN1t_tDeuEmsRUsoyG83frY4'; // default id
 // var authors_jso = JSON.parse(a);
 
 let reference = '';
-//const MAPKEY = 'AIzaSyBuKUXPfazCgPzZo5IxPXd5eROvvIDqUzc';
 
 var favo = favo.replace(/&quot;/g, '"');
 var favo = JSON.parse(favo);
-console.log('*** SHOW.JS');
-console.log(favo);
-console.log('key' + MAPKEY);
-
-
 
 setReviewsDb(favo);
 
@@ -34,11 +28,6 @@ $('#rating').html(ratingStarsHtml(ratingStarsHtml));
 if (favo.comments.length > 0) {
     console.log('COMMENT');
     console.log(favo.comments[0].text);
-}
-
-function setWebsite(place) {
-    if (typeof place.website == 'undefined') return;
-    $('#website').html('<i class="fas fa-link"></i> ' + place.website);
 }
 
 function ratingStarsHtml(ratingNumber) {
@@ -118,7 +107,6 @@ function reviewItemHtmlDb(comment) {
 
     var review_html = '';
     var authorHtml = '<span><i class="fas fa-user-circle"></i></span>' + comment.author.username;
-    //var time = review.time;
 
     return review_html =
         '<div><p class="author-name">' + authorHtml + '</p>'
@@ -162,7 +150,13 @@ function initMap() {
         if(phoneNumber) {
             $('#phone').html('<span><i class="fas fa-phone"></i></span> ' + phoneNumber);
         } 
-        setWebsite(place);
+
+        const site = place.website;
+        if (site) {
+            $('#website').html('<i class="fas fa-link"></i> ' + site);
+
+        }
+      
         setReviews(place);
 
         var ratingNumber = favo.rating;
