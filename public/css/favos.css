@@ -19,7 +19,7 @@
 .cell-whole{   
     display: inline-block;
     margin: 0;
-    /* padding: 1rem; */
+    padding-bottom: 2em;
     overflow: hidden; 
     cursor: pointer;
 }
