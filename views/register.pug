@@ -5,20 +5,30 @@ append styles
 		include ../public/css/register.css
 
 block content
-	include topbar.pug
-	.container.col-lg-3.d-flex.align-items-center
-		.align-self-center
-			div.flex-column#register-head
-				.navbar-brand#login-brand
-					<i class='fas fa-map'></i> FavoPlaces
-				p Sign up
-			<form action='/register' method='POST'>
-				div.form-group
-					label(for="usernameInput") Email address
-					input.form-control(name='username' type="text" id="usernameInput" placeholder="Username")
-				<div class="form-group">
-					<label for="exampleInputPassword1">Password</label>
-					<input type="password" name='password' class="form-control" id="exampleInputPassword1" placeholder="Password">
-				</div>
-				<button type="submit" class="btn btn-primary">Sign up</button>
-			</form>
+	.row
+		.col-1.bg-1.d-none.d-lg-block
+		.col.bg-2
+			div
+				.navbar.d-flex.justify-content-end
+					.nav-item: a.nav-link(href='/favos') Index
+					.nav-item: a.nav-link(href='/login') Log in
+					
+				.container.d-flex.justify-content-start
+					.col-lg-4.align-self-center
+						div.flex-column#register-head
+						.navbar-brand#login-brand
+							<i class='fas fa-map'></i> FavoPlaces
+						p Join
+						<form action='/register' method='POST'>
+							div.form-group
+								label(for="usernameInput") Email address
+								input.form-control(name='username' type="text" id="usernameInput" placeholder="Username")
+							div.form-group
+								<label for="exampleInputPassword1">Password</label>
+								<input type="password" name='password' class="form-control" id="exampleInputPassword1" placeholder="Password">
+
+							<button type="submit" class="btn btn-primary">SIGN UP</button>
+							p
+								span Already have an account?  
+								a(href="/login") SIGN IN
+						</form>

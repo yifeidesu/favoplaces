@@ -8,10 +8,8 @@ append styles
 		include ../public/css/register.css
 
 block content
-	//- include topbar.pug
-	//- display-1= url
 	.row
-		.col-2.bg-1.d-none.d-lg-block
+		.col-1.bg-1.d-none.d-lg-block
 		.col.bg-2
 			div
 				.navbar.d-flex.justify-content-end
@@ -36,8 +34,9 @@ block content
 								<input type="checkbox" class="form-check-input" id="exampleCheck1">
 								<label class="form-check-label" for="exampleCheck1">Remember me</label>
 							</div>
-							<button type="submit" class="btn">SIGN IN</button>
+							button(type="submit" class="btn btn-primary") SIGN IN
 							p: a(href="/register") Forget password
+							
 							p
 								span New?  
 								a(href="/register") SIGN UP
