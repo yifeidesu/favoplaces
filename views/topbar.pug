@@ -7,25 +7,24 @@
 		</button>
 	</div>
 
-	div.collapse.navbar-collapse.justify-content-center#navbarSupportedContent
+	div.collapse.navbar-collapse.justify-content-between#navbarSupportedContent
+		div
+
 		ul.navbar-nav.justify-content-center
-			//- li.nav-item: a.nav-link(href="#" onclick="history.go(-1)") HOME
 			li.nav-item: a.nav-link(href="/search") SEARCH
 			li.nav-item: a.nav-link(href='/favos') FAVOES
-	div
-		ul.navbar-nav
-			- if(!user)
-				li.nav-item: a.nav-link(href='/register')
-					i.fas.fa-user-plus
-					|   Sign up
-				li.nav-item: a.nav-link(href='/login')
-					i.fas.fa-sign-in-alt
-					|   Login
-			- else
-				li.nav-item: a.nav-link(href='/logout')
-					i.fas.fa-sign-out-alt
-					|   Logout
 
+		div
+			li.nav-item.dropdown
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user"></i></a>
+				div(class="dropdown-menu" aria-labelledby="navbarDropdown")
+					- if(!user)
+						a.dropdown-item(href='/register') Sign up
+						a.dropdown-item(href='/login') Sign in
+					- else
+						a.dropdown-item(href='/logout') Log out
+
+div.bg-stripe
 script.
 	$(".nav-item").click(function() {
 		$( this ).addClass( "active" );

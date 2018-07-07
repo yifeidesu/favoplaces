@@ -6,7 +6,7 @@ append styles
 append scripts
     script
         include ../../public/js/utils.js
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    script(src="https://unpkg.com/axios/dist/axios.min.js")
 
         
 block content
@@ -15,7 +15,6 @@ block content
     div#content-container
         div#place-image   
             h1#name= favo.name
-
         .row
             .col-lg-4
                 .card

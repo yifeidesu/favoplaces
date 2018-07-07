@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
+
 const passport = require('passport');
 const Favo = require('../models/favo');
 var User = require('../models/user');
@@ -27,10 +28,16 @@ router.post('/register', (req, res) => {
     });
 });
 
-router.get('/logout', (req, res) => {
+// router.get('/logout', (req, res) => {
+//     req.logout();
+//     res.redirect('/');
+// });
+
+router.get("/logout", function(req, res){
     req.logout();
-    res.redirect('/');
-});
+    req.flash("success", "Logged you out!");
+    res.redirect("/");
+ });
 
 /**
  * REGISTER ROUTES
@@ -47,9 +54,11 @@ router.get('/login', (req, res) => {
 });
 
 router.post('/login', passport.authenticate('local', {
-    successRedirect: '/search',
-    failureRedirect: '/login'
+    successRedirect: '/',
+    failureRedirect: '/login',
+    failureFlash: 'Invalid username or password.'
 }), function (req, res) {
+    //res.redirect(req.originalUrl);
 });
 
 // SEARCH ROUTE

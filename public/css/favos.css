@@ -2,7 +2,7 @@
     padding: 0 12rem;
 }
 
-#main-content{
+#main-content {
     display: inline-block;
     width: 100%;
     margin: 0;
@@ -16,26 +16,24 @@
     display: block;
 }
 
-.cell-whole{   
+.cell-whole {
     display: inline-block;
     margin: 0;
     padding-bottom: 2em;
-    overflow: hidden; 
+    overflow: hidden;
     cursor: pointer;
 }
 
 .cell-content {
     border: 0.5px solid #D8D8D8;
-    box-shadow: 0 0px 1px rgba(0,0,0,.1), 0 3px 4px rgba(0,0,0,.1)
-    /* box-shadow: 2px 2px 2px #D8D8D8; */
+    box-shadow: 0 0px 1px rgba(0, 0, 0, .1), 0 3px 4px rgba(0, 0, 0, .1)
 }
 
 .cell-content:hover {
-    box-shadow: 0 2px 2px rgba(0,0,0,.1), 2px 6px 6px rgba(0,0,0,.1), -1px 0 8px rgba(0,0,0,.1)
+    box-shadow: 0 2px 2px rgba(0, 0, 0, .1), 2px 6px 6px rgba(0, 0, 0, .1), -1px 0 8px rgba(0, 0, 0, .1)
 }
 
 .cell-upper {
-    
     padding: 0.8rem 0.8rem 0.4rem;
 }
 
@@ -50,19 +48,18 @@
     padding-bottom: 0.5rem;
 }
 
-.favo-img {  
+.favo-img {
     height: 10em;
     width: 100%;
     object-fit: cover;
 }
 
-.favo-name{
+.favo-name {
     font-size: 1.5rem;
-
 }
 
 .favo-rating {
-    color:rgb(255, 208, 0);
+    color: rgb(255, 208, 0);
 }
 
 .favo-name, .favo-rating {
@@ -79,16 +76,14 @@
     font-size: inherit;
 }
 
-.favo-users{
+.favo-users {
     color: grey;
     font-size: 1rem;
     margin-bottom: 0;
-    
 }
 
 .favo-users span {
     color: black;
-    
 }
 
 div a.btn.btn-link {
@@ -96,11 +91,6 @@ div a.btn.btn-link {
     padding: 0;
 }
 
-/* the cols in right part */
 .container.col {
     padding: 0;
 }
-
-
-
-
